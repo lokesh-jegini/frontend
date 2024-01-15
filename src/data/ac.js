@@ -1,4 +1,6 @@
+// import ac from "../assets/Ac/"
 export const acData = [{
+    
         "id": "1",
         "product": "Air Conditioner",
         "image": "/assets/Ac/1.jpg",
