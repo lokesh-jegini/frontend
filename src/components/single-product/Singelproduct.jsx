@@ -1,7 +1,9 @@
 import React from 'react'
 import "./singleproduct.css"
 import { NavLink } from 'react-router-dom';
+
 export  function Singelproduct(probs) {
+  // const {filrerdata,setFilterdata}=useState([])
 debugger
   return (
     <div className="Singelproduct">
