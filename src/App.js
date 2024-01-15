@@ -14,6 +14,7 @@ import Books from "./pages/books/Books"
 import Tv from "./pages/tv/Tv"
 import Ac from "./pages/ac/Ac"
 import Speakers from './pages/speakers/Speakers'
+import {Dynamicroute} from "./components/dynamic-route/Dynamicroute"
 
 
 export default function App() {
@@ -37,6 +38,9 @@ export default function App() {
      <Route path='/ac' element={<Ac />} />
      <Route path='/tv' element={<Tv />} />
      <Route path='/speakers' element={<Speakers />} /> 
+     {/* pathparams */}
+     {/* <Route path='/dynamicroute/?' element={<Dynamicroute />} />  */}
+     <Route path='/dynamicroute/:id/?' element={<Dynamicroute />} /> 
     </Routes>
    </BrowserRouter>
 
