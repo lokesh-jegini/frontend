@@ -1,0 +1,45 @@
+// function
+// we have two uses with functions
+// 1)function actlike varible to hold data when it consit retun keyword
+// 2)with the help of function we can call the block of code multible time when we need
+
+const person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    fullName : function() {
+       debugger
+       this.firstName + " " + this.lastName;
+       return "lokesh"
+       
+    },
+    sum : function() {
+          add=5+6;
+    
+          // console.log(add)
+    }
+  };
+
+// console.log(person.firstName)
+// console.log(person.sum())
+
+// const lokiname=person.firstName
+// const lokisum=person.sum()
+// console.log(lokiname)
+//   console.log(lokisum)
+
+// const functionreturn=person.fullName()
+//method call with callback function
+
+// console.log(functionreturn)
+
+let lokidetails=[1,2,3,4,5,6,7]
+var details=lokidetails.map((item)=>{
+ console.log(item)
+  return item
+})
+
+console.log(details)
+
+
+
