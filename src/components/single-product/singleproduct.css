@@ -1,7 +1,15 @@
 .Singelproduct{
     display: flex;
-    flex-wrap: wrap;
 }
 .Singelproduct div {
     text-align: center;
+}
+.singlewrap {
+   
+        flex-direction: row;
+        width: 1172px;
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    
 }

@@ -1,50 +1,56 @@
-import React, { useState } from 'react';
-import "./singleproduct.css";
+import React,{useState} from 'react'
+import "./singleproduct.css"
 import { NavLink } from 'react-router-dom';
-
-export function Singelproduct(probs) {
-  const [filterdata, setFilterdata] = useState([]);
-
-  const companhandler = (mango) => {
-    if (filterdata.includes(mango)) {
-      // Remove the selected company from the filterdata list
-      setFilterdata(filterdata.filter((item) => item !== mango));
-    } else {
-      // Add the selected company to the filterdata list
-      setFilterdata([...filterdata, mango]);
+export  function Singelproduct(probs) {
+  const [filterdetails ,setDetails]=useState([])
+  const  companhandler=(selectdata,e)=>{
+    if(selectdata&&e.target.checked) {
+      const filteredData=probs.mobileData.filter((item3)=>{
+        return (item3.company==selectdata)
+      
+      })
+      setDetails(filteredData)
     }
-  };
+   
+    else{
+      setDetails([])
+    }
 
-  const filterProduct = filterdata.length === 0 ? probs.mobileData : probs.mobileData.filter((item2) => filterdata.includes(item2.company));
+  }
+  console.log(filterdetails)
+  
+  
 
   return (
     <div className="Singelproduct">
-      <div className="filter-container">
+        <div className="filter-container">
         {probs.mobileData.map((item1) => (
-          <div className="filterblock" key={item1.company}>
+          <div key={item1.id}>
             <input
+           checked={filterdetails.some((item) => item.company === item1.company)}
               type="checkbox"
               id={item1.company}
-              checked={filterdata.includes(item1.company)}
-              onChange={() => {
-                companhandler(item1.company);
+              onChange={(e) => {
+               companhandler(item1.company,e);
               }}
             />
             <label htmlFor={item1.company}>{item1.brand || item1.company}</label>
           </div>
         ))}
       </div>
-
-      {filterProduct.map((item) => (
-        <div key={item.id}>
-          <div className="img-block">
-            <NavLink to={`/dynamicroute/${item.id}/?probdata=${JSON.stringify(item)}`}>
-              <img src={item.image} alt="img not found" />
-            </NavLink>
-          </div>
-          <p>{item.model || item.title}</p>
+      <div className='singlewrap'>
+      {(filterdetails.length==0?probs.mobileData:filterdetails).map((item) => (<div >
+      
+      <NavLink to={`/dynamicroute/${item.id}/?probdata=${JSON.stringify(item)}`}>
+      <img key={item.id} src={item.image} alt="img not found" />
+      </NavLink>
+       
+        <p>{item.model || item.title}</p>
+     
         </div>
       ))}
+      </div>
+  
     </div>
   );
 }

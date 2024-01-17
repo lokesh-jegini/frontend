@@ -1,0 +1,111 @@
+1)variable  -->hold any type of data
+               1)number
+               2)boolean
+               3)string
+               4)array
+               5)object
+
+inbuilmethod and properties
+---------------------------
+1)string,array,object -->this data types consit inbuild methods and properties
+2)syntax-->for calling any inbuild methods and properties to the data type syntaxis
+
+eg:variable.method or properties (according to our work). (in this syntax only one dot present in the array variable structure)
+ const data=[1,2,3,4] -->data.push()
+
+mored dots traversing
+------------
+const details={
+    name:"lokesh"
+    sum:function(a,b){
+    }
+}
+
+details.length  (single dot)
+detail.name.slice() (two dot )-->we are traversing inside 
+
+
+
+
+--------------------
+how to understan speedly
+const filterProduct = filterdata.length === 0 ? probs.mobileData : probs.mobileData.filter((item2) => filterdata.includes(item2.company));
+
+
+-------------------------rouhg
+varibale data,calling -->it will give some value what the varible holding currently
+              update  -->it will change the value of the varible
+
+
+
+
+               <input
+              type="checkbox"
+              id={item1.company}
+              checked={filterdata.includes(item1.company)}
+              onChange={() => {
+                companhandler(item1.company);
+              }}
+            />
+
+
+---------------------
+the above code which i written i reading just like a text i am uable to understan the logic how it is inter link each other
+
+
+
+
+1)allawys data iteration is start from the array.
+
+2)we are holding the entire array in a single varible tro wrap more content 
+2)with the help of the iteration methods we are calling each and every data from the array.(with the help of map function)-->(probs.mobileData)
+3)
+
+
+
+----------------
+map
+filter
+includes
+find
+reduce
+setstate
+function trigget to update the state
+
+
+-------------------
+1)map
+The map function creates a new array by applying a function to each element of the original array.
+const fruits = ["Banana", "Orange", "Apple", "Mango", "Grapes", "Watermelon", "Strawberry", "Pineapple", "Kiwi", "Cherry"];
+
+const details=fruits.map((item)=>{
+   
+    return console.log(item)
+})
+debugger
+console.log(details)
+------------
+2)filter
+
+---------------------
+ checked={filterdetails.some((item) => item.company === item1.company)}
+
+ 1)when we call function it will do two works firt it will exexute the code what the function consist
+ 2)if the called function consit the return keyword after exeecution the resulll will append to the function call.
+
+function -->consist return key word and not consist return keyword
+
+function aruguments-->normal aruguments
+                   -->callbakc aruguments
+
+                   for the callbackfunction we can send our custom logic ,this customic logce will run by taing input from the main function
+
+
+why we sore the data to the varible aftet call also
+for 2 reasons
+
+1)easily we will call and use
+2)for update the value when we required
+
+function callsigle time vs multible times
+for the iteatio statemets it willl call multible times
